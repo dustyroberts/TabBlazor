@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 
-namespace TabBlazor.Components.Tables.Components
+namespace NGageUI.Components.Tables.Components
 {
     public partial class GroupByButtonBase<Item> : ComponentBase
     {

@@ -1,4 +1,4 @@
-﻿namespace TabBlazor;
+﻿namespace NGageUI;
 
 public partial class Accordion : TablerBaseComponent
 {
@@ -8,15 +8,6 @@ public partial class Accordion : TablerBaseComponent
     public void AddAccordionItem(AccordionItem item)
     {
         Items.Add(item);
-        StateHasChanged();
-    }
-
-    public void RemoveAccordionItem(AccordionItem item)
-    {
-        if (Items.Contains(item))
-        {
-            Items.Remove(item);
-        }
         StateHasChanged();
     }
 

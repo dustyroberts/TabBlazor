@@ -1,7 +1,7 @@
 ﻿@typeparam TableItem
 @inherits EditRowBase<TableItem>
 
-@namespace  TabBlazor.Components.Tables
+@namespace  NGageUI.Components.Tables
 
 <tr class="is-inline-edit data-row" @ref="editRow">
 
@@ -12,7 +12,7 @@
 
     @foreach (var column in InlineEditTable.VisibleColumns)
     {
-        <td style="@GetColumnWidth(column)" class="@GetColumnClass(column)" data-label="@column.Title">
+        <td style="@GetColumnWidth(column)" class="@GetColumnClass(column)">
             @if (column.EditorTemplate != null)
             {
                 @column.EditorTemplate(Item)

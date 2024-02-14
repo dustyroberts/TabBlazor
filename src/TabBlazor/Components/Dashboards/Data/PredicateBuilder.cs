@@ -1,4 +1,4 @@
-﻿namespace TabBlazor.Dashboards
+﻿namespace NGageUI.Dashboards
 {
     /// <summary>
     /// Enables the efficient, dynamic composition of query predicates.

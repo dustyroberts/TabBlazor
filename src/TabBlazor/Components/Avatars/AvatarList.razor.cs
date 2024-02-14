@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class AvatarList : TablerBaseComponent
     {

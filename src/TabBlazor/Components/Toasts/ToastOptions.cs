@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
    public class ToastOptions
     {
@@ -16,5 +16,12 @@ namespace TabBlazor
         public bool ShowHeader { get; set; } = true;
         public bool ShowProgress { get; set; } = true;
         public bool AutoClose => Delay > 0;
+        
+        public bool AddStatusIcon { get; set; }
+
+        // applies to ShowHeader and AddStatusIcon and progress bar
+        public string StatusColor { get; set; } // Add a property for progress color (css color-class)
+
+        public int InitialProgressValue { get; set; }
     }
 }

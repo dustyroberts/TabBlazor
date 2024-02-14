@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TabBlazor.Components
+namespace NGageUI.Components
 {
    public static class Extensions
     {

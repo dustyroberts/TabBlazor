@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace TabBlazor
+namespace NGageUI
 {
     public class FlagService
     {

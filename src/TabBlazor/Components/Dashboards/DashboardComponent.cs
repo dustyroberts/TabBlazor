@@ -1,6 +1,6 @@
 ﻿
 
-namespace TabBlazor.Dashboards
+namespace NGageUI.Dashboards
 {
     public class DashboardComponent<TItem> :  ComponentBase where TItem : class
     {

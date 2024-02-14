@@ -1,4 +1,4 @@
-namespace TabBlazor.Components.QuickTables;
+namespace NGageUI.Components.QuickTables;
 
 public struct GridItemsProviderRequest<TGridItem>
 {

@@ -1,45 +1,21 @@
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.Extensions.Options;
-using TabBlazor.Components.Offcanvas;
-
-namespace TabBlazor;
-
-public partial class OffcanvasContainer
+﻿namespace NGageUI
 {
-    [Inject] private IOffcanvasService offcanvasService { get; set; }
-
-    protected override void OnInitialized()
+    public partial class OffcanvasContainer
     {
-        offcanvasService.OnChanged += StateHasChanged99;
 
-        base.OnInitialized();
-    }
+        [Inject] private IOffcanvasService offcanvasService { get; set; }
 
-    private void OnClickOutside(OffcanvasModel model)
-    {
-        if (model.Options.CloseOnClickOutside)
+
+        protected override void OnInitialized()
         {
-            offcanvasService.Close();
+            offcanvasService.OnChanged += StateHasChanged99;
+
+            base.OnInitialized();
+        }
+
+        private void StateHasChanged99()
+        {
+            StateHasChanged();
         }
     }
-    
-    protected void OnKeyDown(KeyboardEventArgs e, OffcanvasModel offcanvasModel)
-    {
-        if (e.Key == "Escape" && offcanvasModel.Options.CloseOnEsc)
-        {
-            offcanvasService.Close();
-        }
-    }
-
-    private void StateHasChanged99()
-    {
-        StateHasChanged();
-    }
-
-    private string GetClasses(OffcanvasModel offcanvasModel) => new ClassBuilder()
-        .Add("offcanvas")
-        .Add($"offcanvas-{offcanvasModel.Options.Position.ToString().ToLower()}")
-        .Add(offcanvasModel.Options.WrapperCssClass)
-        .Add("show")
-        .ToString();
 }

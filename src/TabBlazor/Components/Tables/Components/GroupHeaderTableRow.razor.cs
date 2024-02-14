@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
-using TabBlazor.Components.Tables.Components;
+using NGageUI.Components.Tables.Components;
 using System.Threading.Tasks;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public class GroupHeaderTableRowBase<TableItem> : ComponentBase
     {

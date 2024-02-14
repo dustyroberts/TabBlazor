@@ -1,5 +1,5 @@
 ﻿
-namespace TabBlazor
+namespace NGageUI
 {
     public class GeneratedFlag
     {
@@ -21,7 +21,7 @@ namespace TabBlazor
                 return "null";
             }
 
-            return $"new TabBlazor.Country(\"{FlagType.Country.Name}\", \"{FlagType.Country.Alpha2}\", \"{FlagType.Country.Alpha3}\", {FlagType.Country.Numeric})";
+            return $"new NGageUI.Country(\"{FlagType.Country.Name}\", \"{FlagType.Country.Alpha2}\", \"{FlagType.Country.Alpha3}\", {FlagType.Country.Numeric})";
         }
 
 

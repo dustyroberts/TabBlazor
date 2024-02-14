@@ -1,4 +1,4 @@
-﻿namespace TabBlazor
+﻿namespace NGageUI
 {
     public partial class Page : TablerBaseComponent
     {

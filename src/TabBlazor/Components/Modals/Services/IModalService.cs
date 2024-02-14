@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TabBlazor.Components.Modals;
+using NGageUI.Components.Modals;
 
-namespace TabBlazor.Services
+namespace NGageUI.Services
 {
     public interface IModalService
     {

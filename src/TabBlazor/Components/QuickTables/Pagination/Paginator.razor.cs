@@ -1,6 +1,6 @@
-using TabBlazor.Components.QuickTables.Infrastructure;
+using NGageUI.Components.QuickTables.Infrastructure;
 
-namespace TabBlazor.Components.QuickTables;
+namespace NGageUI.Components.QuickTables;
 
 public partial class Paginator : IDisposable
 {

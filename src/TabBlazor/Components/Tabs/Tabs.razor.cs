@@ -1,11 +1,10 @@
-﻿using TabBlazor.Components;
+﻿using NGageUI.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Tabs : TablerBaseComponent
     {
         public ITab ActiveTab { get; private set; }
-
         public void AddTab(ITab tab)
         {
             if (ActiveTab == null)

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class TablerForm : ComponentBase
     {

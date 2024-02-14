@@ -1,17 +1,19 @@
-﻿namespace TabBlazor.Components.Tables.Components
+﻿using Microsoft.AspNetCore.Components;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace NGageUI.Components.Tables.Components
 {
     public class TableResult<TKey, TElement> : List<TElement>, IGrouping<TKey, TElement>
     {
-        public bool Expanded = true;
-
         public TableResult(TKey key, List<TElement> elements)
         {
             Key = key;
             AddRange(elements);
         }
 
-        public RenderFragment<TableResult<TKey, TElement>> GroupingTemplate { get; set; }
-
         public TKey Key { get; set; }
+        public bool Expanded = true;
+        public RenderFragment<TableResult<TKey, TElement>> GroupingTemplate { get; set; }
     }
 }

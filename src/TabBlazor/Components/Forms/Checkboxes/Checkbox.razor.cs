@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System.ComponentModel;
 using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Checkbox : ComponentBase
     {

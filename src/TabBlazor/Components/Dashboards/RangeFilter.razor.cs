@@ -1,6 +1,6 @@
 
 
-namespace TabBlazor.Dashboards
+namespace NGageUI.Dashboards
 {
     public partial class RangeFilter<TItem> : DashboardComponent<TItem> where TItem : class
     {

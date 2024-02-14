@@ -1,0 +1,47 @@
+﻿@using NGageUI.Services;
+@using NGageUI;
+
+@inject NavigationManager NavigationManager;
+
+<div class="btn-list flex-nowrap">
+    
+    @if (string.IsNullOrEmpty(redirectURL))
+    {
+        <Button class="btn btn-primary mr-auto" OnClick='onclickEvent' Text="@addButtonText" hidden="@hideAddButton" />
+    }else
+    {
+        <Button class="btn btn-primary mr-auto" OnClick='()=>NavigationManager.NavigateTo(redirectURL)' Text="@addButtonText" hidden="@hideAddButton" />
+    }
+    
+
+    @* <Button class="btn btn-primary mr-auto" Disabled="@DeleteUserButtonDisabled" OnClick="DisableSelectedItems" Text="@UserButtonEnableDisabled"></Button>*@
+    <Button class="btn btn-primary mr-auto" Disabled="@deleteUserButtonDisabled" Text="@userButtonEnableDisabled" OnClick="@disableSelectedItems" hidden="@statusButtonHidden" />
+</div>
+ 
+@code
+{
+    [Parameter]
+    public bool deleteUserButtonDisabled { get; set; }
+
+    [Parameter]
+    public string userButtonEnableDisabled { get; set; }
+
+    [Parameter]
+    public string addButtonText { get; set; }
+
+    [Parameter]
+    public bool statusButtonHidden { get; set; }
+
+    [Parameter]
+    public bool hideAddButton { get; set; }
+
+    [Parameter]
+    public string redirectURL { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> disableSelectedItems { get; set; }
+    
+    [Parameter]
+    public EventCallback<MouseEventArgs> onclickEvent { get; set; }
+     
+}

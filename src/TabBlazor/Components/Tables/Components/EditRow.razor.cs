@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
-using TabBlazor.Services;
+using NGageUI.Services;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public class EditRowBase<TableItem> : TableRowComponentBase<TableItem>
     {

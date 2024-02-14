@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components.Web;
 using System;
 using System.Threading.Tasks;
-using TabBlazor.Services;
+using NGageUI.Services;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class ModalView : ComponentBase, IDisposable
     {
@@ -97,11 +97,6 @@ namespace TabBlazor
             }
         }
 
-        protected string GetModalWrapperClasses() => new ClassBuilder()
-            .AddIf(Options.ModalCssClass, Options.ModalCssClass != null)
-            .AddIf("modal-blur", Options.BlurBackground)
-            .ToString();
-        
         protected string GetModalCss() => new ClassBuilder()
                 .Add("modal-dialog")
                 .AddIf("modal-sm", Options.Size == ModalSize.Small)

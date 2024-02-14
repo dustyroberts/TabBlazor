@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public abstract class NavigationBase : TablerBaseComponent, IDisposable
     {
@@ -20,7 +20,7 @@ namespace TabBlazor
 
         internal bool ExpandClick;
 
-        public bool Disabled { get; set; }  
+        public bool Disabled { get; set; }
 
 
         protected override void OnInitialized()
@@ -53,15 +53,17 @@ namespace TabBlazor
             IsExpanded = expanded;
         }
 
-        public void CollapseAll() { 
-        
+        public void CollapseAll()
+        {
+
             if (Parent != null)
             {
                 Parent.CollapseAll();
             }
             else
             {
-                foreach (var child in Children) {
+                foreach (var child in Children)
+                {
 
                     child.SetExpanded(false);
                 }
@@ -78,7 +80,7 @@ namespace TabBlazor
             {
                 if (active)
                 {
-                   foreach (var child in Parent.Children)
+                    foreach (var child in Parent.Children)
                     {
                         if (child != this)
                         {

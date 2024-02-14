@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Forms;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class ItemSelect<TItem, TValue> : TablerBaseComponent, IDisposable
     {
@@ -170,7 +170,7 @@ namespace TabBlazor
 
             if (firstRender && userAgent == null)
             {
-                userAgent = await jSRuntime.InvokeAsync<string>("tabBlazor.getUserAgent");
+                userAgent = await jSRuntime.InvokeAsync<string>("NGageUI.getUserAgent");
             }
         }
 

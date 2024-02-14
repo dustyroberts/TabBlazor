@@ -8,7 +8,7 @@ using System.Linq;
 using System.Reflection;
 //using Swegon.Components;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public class TableFilterService
     {

@@ -1,6 +1,6 @@
-﻿using TabBlazor.Components.Offcanvas;
+﻿using NGageUI.Components.Offcanvas;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public interface IOffcanvasService
     {

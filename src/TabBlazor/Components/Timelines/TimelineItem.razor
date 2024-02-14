@@ -1,5 +1,5 @@
 ﻿@inherits TablerBaseComponent
-@namespace TabBlazor
+@namespace NGageUI
 
 <HtmlElement Tag="li"
              class="@ClassNames"
@@ -7,7 +7,7 @@
              @attributes="@UnmatchedParameters">
 
    
-    <div class="timeline-event-icon @IconColor.GetColorClass("bg")-lt">
+    <div class="list-timeline-icon @IconColor.GetColorClass("bg")">
         @if (IconTemplate != null)
         {
             @IconTemplate
@@ -18,23 +18,15 @@
         }
     </div>
  
-    <div class="card timeline-event-card">
-
-        <div class="card-body">
-
-            @if (!string.IsNullOrWhiteSpace(Time))
-            {
-                <div class="text-secondary float-end">@Time</div>
-            }
-
-            @if (!string.IsNullOrWhiteSpace(Title))
-            {
-                <h4>@Title</h4>
-            }
-
-            @ChildContent
-            
-        </div>
-
+    <div class="list-timeline-content">
+        @if (!string.IsNullOrWhiteSpace(Time))
+        {
+            <div class="list-timeline-time">@Time</div>
+        }
+        @if (!string.IsNullOrWhiteSpace(Title))
+        {
+            <p class="list-timeline-title">@Title</p>
+        }
+        @ChildContent
     </div>
 </HtmlElement>

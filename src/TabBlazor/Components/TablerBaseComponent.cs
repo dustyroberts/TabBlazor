@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public abstract class TablerBaseComponent : ComponentBase
     {
@@ -20,11 +20,15 @@ namespace TabBlazor
         {
             get
             {
-                var cssClasses = GetUnmatchedParameter("class")?.ToString();
+                var cssClasses = GetUnmatchedParameter("Class")?.ToString();
 
-                if (cssClasses != null)
+                if (providedCssClasses == null)
                 {
                     providedCssClasses = cssClasses;
+                    if (providedCssClasses == null)
+                    {
+                        providedCssClasses = "";
+                    }
                 }
 
                 return providedCssClasses;

@@ -1,0 +1,38 @@
+﻿@using Microsoft.JSInterop;
+@inject IJSRuntime JSRuntime
+
+@namespace NGageUI
+
+ <SwitchContent Animation="SwitchAnimation.Fade">
+    <DefaultTemplate>
+        <Icon class="icon" IconType="@TablerIcons.Sun" OnClick="ToggleTheme" />
+    </DefaultTemplate>
+    <ActiveTemplate>
+        <Icon class="icon" IconType="@TablerIcons.Moon" OnClick="ToggleTheme" />
+    </ActiveTemplate>
+</SwitchContent>
+@*<Checkbox Label="Dark Mode" @bind-Value="IsDarkMode" Changed="@(() => ToggleTheme())" Switch />*@
+
+@code 
+{
+    private bool IsDarkMode = false;
+
+    private async Task ToggleTheme()
+    {
+        if (IsDarkMode)
+        {
+            //await JSRuntime.InvokeVoidAsync("NGageUI.addBodyClass", "theme-dark");
+            await JSRuntime.InvokeVoidAsync("NGageUI.addDarkTag");
+            //await JSRuntime.InvokeVoidAsync("NGageUI.removeBodyClass", "theme-light");
+        }
+        else
+        {
+
+            //await JSRuntime.InvokeVoidAsync("NGageUI.addBodyClass", "theme-light");
+            await JSRuntime.InvokeVoidAsync("NGageUI.removeDarkTag");
+            // await JSRuntime.InvokeVoidAsync("NGageUI.removeBodyClass", "theme-dark");
+        }
+
+        IsDarkMode = !IsDarkMode;
+    }
+}

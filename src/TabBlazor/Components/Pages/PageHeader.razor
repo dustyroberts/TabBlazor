@@ -1,8 +1,23 @@
-﻿@namespace TabBlazor
+﻿@namespace NGageUI
 @inherits TablerBaseComponent
-<HtmlElement Tag="div"
-             class="@ClassNames"
-             @onclick="OnClick"
-             @attributes="@UnmatchedParameters">
-    @ChildContent
-</HtmlElement>
+
+<div class="page-header d-print-none @ClassNames" @onclick="OnClick"
+     @attributes="@UnmatchedParameters">
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="page-pretitle">
+                    @PreTitle
+                </div>
+                <h2 class="page-title">
+                    @Title
+                </h2>
+            </div>
+            <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                    @ChildContent
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

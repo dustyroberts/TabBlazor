@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Components.Web;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TabBlazor.Components.Tables;
-using TabBlazor.Services;
+using NGageUI.Components.Tables;
+using NGageUI.Services;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public class TableRowBase<TableItem> : TableRowComponentBase<TableItem>
     {

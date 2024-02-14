@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class NavbarMenu : TablerBaseComponent
     {

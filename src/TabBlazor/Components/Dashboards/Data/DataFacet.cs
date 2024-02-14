@@ -1,7 +1,7 @@
 ﻿
 using System.Reflection.Emit;
 
-namespace TabBlazor.Dashboards
+namespace NGageUI.Dashboards
 {
     public class DataFacet<TItem> where TItem : class
     {

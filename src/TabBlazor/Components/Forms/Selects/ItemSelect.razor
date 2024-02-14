@@ -1,4 +1,4 @@
-﻿@namespace TabBlazor
+﻿@namespace NGageUI
 @inherits TablerBaseComponent
 @typeparam TItem
 @typeparam TValue
@@ -34,7 +34,7 @@
                                     <div class="badge-list">
                                         @foreach (var selectedItem in selectedItems)
                                         {
-                                            <Badge BackgroundColor="TablerColor.Primary">@GetSelectedText(selectedItem) <span @onclick:stopPropagation @onclick="@(()=> RemoveSelected(selectedItem))"><Icon class="ms-2" Size="16" IconType="@InternalIcons.X"></Icon></span></Badge>
+                                            <Badge BackgroundColor="TablerColor.White">@GetSelectedText(selectedItem) <span @onclick:stopPropagation @onclick="@(()=> RemoveSelected(selectedItem))"><Icon class="ms-2" Size="16" IconType="@InternalIcons.X"></Icon></span></Badge>
                                         }
                                     </div>
                                 }

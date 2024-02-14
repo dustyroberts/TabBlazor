@@ -1,21 +1,24 @@
-﻿@namespace TabBlazor
+﻿@namespace NGageUI
 
-@foreach (var offcanvasModel in offcanvasService.Models.Reverse())
+
+@foreach (var modalModel in offcanvasService.Models.Reverse())
 {
-    <ClickOutside OnClickOutside="() => OnClickOutside(offcanvasModel)" Strategy="ClickOutside.RegisterStrategy.OnRender">
-        <div class="@GetClasses(offcanvasModel)" @onkeydown="@(ev => OnKeyDown(ev, offcanvasModel))" tabindex="-1" id="offcanvasStart" aria-labelledby="offcanvasStartLabel" aria-modal="true" role="dialog">
-            <div class="offcanvas-header" @onclick:stopPropagation>
-                <h2 class="offcanvas-title" id="offcanvasStartLabel">@offcanvasModel.Title</h2>
-                <button type="button" class="btn-close text-reset" aria-label="Close" @onclick="offcanvasService.Close"/>
-            </div>
-            <div class="offcanvas-body">
-                @offcanvasModel.Contents
-            </div>
+    <div class="offcanvas offcanvas-@(modalModel.Options.Position.ToString().ToLower()) show" tabindex="-1" id="offcanvasStart" aria-labelledby="offcanvasStartLabel" aria-modal="true" role="dialog">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="offcanvasStartLabel">@modalModel.Title</h2>
+            <button type="button" class="btn-close text-reset" aria-label="Close" @onclick="offcanvasService.Close" />
         </div>
-    </ClickOutside>
+        <div class="offcanvas-body">
+            @modalModel.Contents
+                   
+        </div>
+    </div>
 
-    if (offcanvasModel.Options.Backdrop)
+    if (modalModel.Options.Backdrop)
     {
-        <div class="offcanvas-backdrop fade show"/>
+        <div class="offcanvas-backdrop fade show" />
     }
+
+
+
 }

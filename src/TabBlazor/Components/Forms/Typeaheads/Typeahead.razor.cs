@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using Timer = System.Timers.Timer;
 
-namespace TabBlazor;
+namespace NGageUI;
 
 public partial class Typeahead<TItem, TValue> : TablerBaseComponent
 {

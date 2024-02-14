@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using TabBlazor.Services;
+using NGageUI.Services;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class ToastContainer : ComponentBase
     {

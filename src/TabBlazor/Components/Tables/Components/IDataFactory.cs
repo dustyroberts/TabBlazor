@@ -1,4 +1,4 @@
-﻿namespace TabBlazor.Components.Tables.Components
+﻿namespace NGageUI.Components.Tables.Components
 {
     public interface IDataProvider<Item>
     {

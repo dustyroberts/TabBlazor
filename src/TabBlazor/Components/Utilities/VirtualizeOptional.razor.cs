@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class VirtualizeOptional<TItem>
     {

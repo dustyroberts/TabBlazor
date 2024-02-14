@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.VisualBasic;
 using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Dropdown : TablerBaseComponent
     {

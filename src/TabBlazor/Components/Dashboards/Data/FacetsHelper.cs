@@ -1,9 +1,9 @@
 ﻿
 using System;
 using System.Linq;
-using TabBlazor.Dashboards.Extensions;
+using NGageUI.Dashboards.Extensions;
 
-namespace TabBlazor.Dashboards
+namespace NGageUI.Dashboards
 {
     internal static class FacetsHelper
     {

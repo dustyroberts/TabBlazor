@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace TabBlazor.Components.QuickTables.Infrastructure;
+namespace NGageUI.Components.QuickTables.Infrastructure;
 
 internal static class AsyncQueryExecutorSupplier
 {
@@ -20,7 +20,7 @@ internal static class AsyncQueryExecutorSupplier
                     IsEntityFrameworkProviderTypeCache.GetOrAdd(providerType, IsEntityFrameworkProviderType))
                 {
                     throw new InvalidOperationException(
-                        $"The supplied {nameof(IQueryable)} is provided by Entity Framework. To query it efficiently, you must reference the package TabBlazor.Components.QuickTables.EntityFrameworkAdapter and call AddQuickTableEntityFrameworkAdapter on your service collection.");
+                        $"The supplied {nameof(IQueryable)} is provided by Entity Framework. To query it efficiently, you must reference the package NGageUI.Components.QuickTables.EntityFrameworkAdapter and call AddQuickTableEntityFrameworkAdapter on your service collection.");
                 }
             }
             else if (executor.IsSupported(queryable))

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public enum AvatarSize
     {

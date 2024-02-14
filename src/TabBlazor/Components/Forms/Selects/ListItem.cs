@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TabBlazor.Components.Selects
+namespace NGageUI.Components.Selects
 {
     public class ListItem<TItem, TValue>
     {

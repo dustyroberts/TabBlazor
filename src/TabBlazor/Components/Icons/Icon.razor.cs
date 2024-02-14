@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Icon : TablerBaseComponent
     {
@@ -13,7 +13,7 @@ namespace TabBlazor
         [Parameter] public int Rotate { get; set; }
 
         private bool filled => Filled ?? IconType?.Filled ?? false;
-        private double strokeWidth => StrokeWidth ?? IconType?.StrokeWidth ?? 2;
+        private double strokeWidth => StrokeWidth ?? IconType?.StrokeWidth ?? 1;
         private string elements => IconType?.Elements;
 
         private string FilledString => filled ? "currentColor" : "none";

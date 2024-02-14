@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public enum TimelineType
     {
@@ -13,10 +13,10 @@ namespace TabBlazor
         [Parameter] public TimelineType Type { get; set; } = TimelineType.Default;
 
         protected override string ClassNames => ClassBuilder
-            .Add("timeline")
+            .Add("list list-timeline")
             .Add(BackgroundColor.GetColorClass("bg"))
             .Add(TextColor.GetColorClass("text"))
-            .AddIf("timeline-simple", Type == TimelineType.Simple)
+            .AddIf("list-timeline-simple", Type == TimelineType.Simple)
             .ToString();
     }
 }

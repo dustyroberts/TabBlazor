@@ -1,9 +1,15 @@
-﻿<div class="toast show me-1 mb-1" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" data-toggle="toast">
+﻿
+<div class="toast show me-1 mb-1" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" data-toggle="toast">
 
     @if (Toast.Options.ShowHeader)
     {
         <div class="toast-header">
-            <strong class="me-auto">@Toast.Title</strong>
+            @if (Toast.Options.AddStatusIcon == true)
+            {
+                <Icon class="icon" Color="@Toast.Options.StatusColor" IconType="@TablerIcons.Circle_check_filled" />
+                <span>&nbsp;</span>
+            }
+            <strong class="me-auto text-@Toast.Options.StatusColor">@Toast.Title</strong>
             <small>@Toast.SubTitle</small>
             <button type="button" class="ms-2 btn-close" data-dismiss="toast" aria-label="Close" @onclick="() => ToastService.RemoveToastAsync(Toast)">
             </button>
@@ -28,8 +34,15 @@
 
     @if (Toast.Options.AutoClose && Toast.Options.ShowProgress)
     {
-        <div class="progress progress-sm">
-            <div class="progress-bar" style="width: @(_progress)%; transition:none" />
+        
+        <div class="progress progress-sm ">
+            @if (string.IsNullOrEmpty(Toast.Options.StatusColor))
+            {
+                <div class="progress-bar" style="width: @(_progress)%; transition:none;"></div>
+            }else
+            {
+                <div class="progress-bar bg-@Toast.Options.StatusColor" style="width: @(_progress)%; transition:none;"></div>
+            }
         </div>
     }
 

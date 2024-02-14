@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.Forms;
-using TabBlazor.Services;
+using NGageUI.Services;
 
-namespace TabBlazor.Components.ObjectBrowser
+namespace NGageUI.Components.ObjectBrowser
 {
     public partial class PropertyValueLink
     {
@@ -20,7 +20,7 @@ namespace TabBlazor.Components.ObjectBrowser
         {
             if(PropertyValue != null)
             {
-                var component = new RenderComponent<TabBlazor.ObjectBrowser>().Set(e => e.Object, PropertyValue);
+                var component = new RenderComponent<NGageUI.ObjectBrowser>().Set(e => e.Object, PropertyValue);
                 var result = await ModalService.ShowAsync(PropertyValue.GetType().FullName, component, new ModalOptions { Size = ModalSize.XLarge });
             }
         

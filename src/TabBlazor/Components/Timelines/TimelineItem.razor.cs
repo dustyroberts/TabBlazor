@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class TimelineItem : TablerBaseComponent
     {
@@ -11,7 +11,7 @@ namespace TabBlazor
         [Parameter] public string Title { get; set; }
 
         protected override string ClassNames => ClassBuilder
-            .Add("timeline-event")
+            .Add("")
             .Add(BackgroundColor.GetColorClass("bg"))
             .Add(TextColor.GetColorClass("text"))
             .ToString();

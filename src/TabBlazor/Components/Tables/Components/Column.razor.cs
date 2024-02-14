@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Components;
-using TabBlazor.Components.Tables.Components;
+using NGageUI.Components.Tables.Components;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TabBlazor.Components.Tables;
+using NGageUI.Components.Tables;
 using LinqKit;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public class ColumnBase<Item> : ComponentBase, IColumn<Item>
     {
@@ -35,13 +35,12 @@ namespace TabBlazor
         [Parameter] public Expression<Func<Item, object>> Property { get; set; }
         [Parameter] public Expression<Func<Item, string, bool>> SearchExpression { get; set; }
         [Parameter] public SortOrder? Sort { get; set; }
-        [Parameter]public Align Align { get; set; }
-        [Parameter] public bool Group { get; set; }
-        
         public bool SortColumn { get; set; }
-        public bool GroupBy { get; set; }
+
+        [Parameter] public bool Group { get; set; }
         public bool SortDescending { get; set; }
         public Type Type { get; private set; }
+        public bool GroupBy { get; set; }
 
 
         public void Dispose()

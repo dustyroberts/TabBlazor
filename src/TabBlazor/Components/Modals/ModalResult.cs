@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public class ModalResult
     {

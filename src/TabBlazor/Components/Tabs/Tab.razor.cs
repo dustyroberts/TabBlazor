@@ -1,6 +1,6 @@
-﻿using TabBlazor.Components;
+﻿using NGageUI.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
    public partial class Tab : TablerBaseComponent, ITab
     {
@@ -9,6 +9,9 @@ namespace TabBlazor
         [Parameter] public RenderFragment Header { get; set; }
 
         string TitleCssClass => ContainerTabSet.ActiveTab == this ? "active" : null;
+
+        [Parameter] public string TabId { get; set; }
+        [Parameter] public Tab CurrentTab { get; set; }
 
         protected override void OnInitialized()
         {

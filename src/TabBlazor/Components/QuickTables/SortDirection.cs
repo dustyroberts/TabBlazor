@@ -1,4 +1,4 @@
-namespace TabBlazor.Components.QuickTables;
+namespace NGageUI.Components.QuickTables;
 
 /// <summary>
 ///     Describes the direction in which a <see cref="QuickTable{TGridItem}" /> column is sorted.

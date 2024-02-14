@@ -1,5 +1,5 @@
 ﻿
-namespace TabBlazor
+namespace NGageUI
 {
     public interface IIconType
     {
@@ -41,6 +41,8 @@ namespace TabBlazor
     {
         Other = 0,
         TablerIcons = 1,
-        MaterialDesignIcons = 2
+        MaterialDesignIcons = 2,
+        NGage = 3
+
     }
 }

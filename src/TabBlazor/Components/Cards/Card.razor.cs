@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public enum CardSize
     {
@@ -16,6 +16,7 @@ namespace TabBlazor
         Top,
         Bottom
     }
+
     public partial class Card : TablerBaseComponent
     {
         [Parameter] public CardSize Size { get; set; } = CardSize.Default;

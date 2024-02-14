@@ -1,10 +1,11 @@
 ﻿@typeparam Item
 @inherits TableBase<Item>
 
-@using TabBlazor.Components.Tables.Components
-@using TabBlazor.Components.Tables
-@using TabBlazor.Components
-@namespace TabBlazor
+@using NGageUI.Components.Tables.Components
+@using NGageUI.Components.Tables
+@using NGageUI.Components
+
+@namespace NGageUI
 
 <CascadingValue Value="(ITable<Item>) this" Name="Table">
     <Card>
@@ -18,10 +19,16 @@
                     @HeaderTemplate
                 }
                 <GroupByButton Item="Item" />
-                <TableHeaderTools TableItem="Item" />
+
+                @*// TODO: Apply @media*@
+                <div class="btn-list flex-nowrap align-items-center order-md-first">
+                    <TableHeaderTools TableItem="Item" />
+                </div>
+
             </CardHeader>
         }
 
+        <CardBody>
             <div class="the-grid">
                 <TablerForm Model="@CurrentEditItem" OnValidSubmit="@OnValidSubmit" @bind-IsValid="IsRowValid">
 
@@ -110,5 +117,6 @@
 
                 }
             </div>
+        </CardBody>
     </Card>
 </CascadingValue>

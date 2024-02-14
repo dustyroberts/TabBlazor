@@ -1,6 +1,6 @@
 ﻿
 
-namespace TabBlazor.Dashboards.Extensions
+namespace NGageUI.Dashboards.Extensions
 {
     public static class Extensions
     {

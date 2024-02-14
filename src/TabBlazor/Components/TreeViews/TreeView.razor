@@ -1,10 +1,10 @@
-﻿@namespace TabBlazor
+﻿@namespace NGageUI
 @typeparam TItem
 
 @if (Items != null)
 {
     <CascadingValue Name="Root" Value="this">
-        <TabBlazor.Components.TreeViews.TreeViewNodes Items="Items"
+        <NGageUI.Components.TreeViews.TreeViewNodes Items="Items"
                                                       Template="Template"
                                                       ChildSelector="ChildSelector"
                                                       />

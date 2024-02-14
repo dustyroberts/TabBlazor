@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor.Components
+namespace NGageUI.Components
 {
     public interface ITab
     {

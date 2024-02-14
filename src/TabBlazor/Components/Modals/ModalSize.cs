@@ -1,4 +1,4 @@
-﻿namespace TabBlazor
+﻿namespace NGageUI
 {
     public enum ModalSize
     {

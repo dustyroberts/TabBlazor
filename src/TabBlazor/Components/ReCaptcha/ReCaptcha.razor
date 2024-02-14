@@ -1,0 +1,70 @@
+﻿@using Microsoft.JSInterop;
+@inject IJSRuntime JSRuntime
+@inject ReCaptchaStateService ReCaptchaState
+
+@namespace NGageUI
+
+<div id="recaptchaDiv"></div>
+
+@code {
+    [Inject]
+    IReCaptchaService _reCaptchaService { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnSuccess { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnExpired { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> IsReCaptchaValidated { get; set; }
+
+    private DotNetObjectReference<ReCaptcha>? _dotNetObjReference;
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _dotNetObjReference = DotNetObjectReference.Create(this);
+            await JSRuntime.InvokeVoidAsync("NGageUI.reCaptcha.Init", _dotNetObjReference, "recaptchaDiv", Environment.GetEnvironmentVariable("RECAPTCHA_SITE_KEY"));
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RECAPTCHA_SECRET_KEY")) || string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RECAPTCHA_SITE_KEY")))
+        {
+            throw new Exception("RECAPTCHA_SECRET_KEY and RECAPTCHA_SITE_KEY environment variables must be set.");
+        }
+
+        ReCaptchaState.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        ReCaptchaState.OnChange -= StateHasChanged;
+    }
+
+    [JSInvokable]
+    public void RecaptchaSuccess(string response)
+    {
+        _reCaptchaService.ValidateResponse(response, Environment.GetEnvironmentVariable("RECAPTCHA_SECRET_KEY"));
+        ReCaptchaState.IsReCaptchaValidated = true;
+        if (OnSuccess.HasDelegate)
+        {
+            OnSuccess.InvokeAsync(response);
+        }
+        StateHasChanged();
+    }
+
+    [JSInvokable]
+    public void RecaptchaExpired()
+    {
+        if (OnExpired.HasDelegate)
+        {
+            OnExpired.InvokeAsync();
+        }
+        StateHasChanged();
+    }
+
+}

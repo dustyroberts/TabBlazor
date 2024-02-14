@@ -1,6 +1,6 @@
 
 
-namespace TabBlazor.Dashboards
+namespace NGageUI.Dashboards
 {
     public partial class GroupFacet<TItem> : BaseFacet<TItem> where TItem : class
     {

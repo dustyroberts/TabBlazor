@@ -1,4 +1,4 @@
-﻿namespace TabBlazor.Components.Tables;
+﻿namespace NGageUI.Components.Tables;
 
 public enum OnCancelStrategy {
     AsIs,

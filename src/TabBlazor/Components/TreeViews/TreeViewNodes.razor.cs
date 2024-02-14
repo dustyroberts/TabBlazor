@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TabBlazor.Components.TreeViews
+namespace NGageUI.Components.TreeViews
 {
     public partial class TreeViewNodes<TItem> : ComponentBase
     {

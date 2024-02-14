@@ -1,5 +1,5 @@
 ﻿@inherits TablerBaseComponent
-@namespace TabBlazor
+@namespace NGageUI
 
 <HtmlElement Tag="@HtmlTag"
              class="@ClassNames"
@@ -30,7 +30,7 @@
     @if (SubMenu != null && isExpanded && Expandable)
     {
         <CascadingValue Value="this" Name="Parent">
-            <ul data-bs-popper="none" class="dropdown-menu show @(NavbarIsHorizontalAndDark ? "bg-dark" : "")">
+            <ul data-bs-popper="none" class="dropdown-menu show @(NavbarIsHorizontalAndDark ? "bg-dark text-muted" : "")">
                 @SubMenu
             </ul>
         </CascadingValue>

@@ -1,7 +1,7 @@
 
 using System.Diagnostics;
 
-namespace TabBlazor.Dashboards
+namespace NGageUI.Dashboards
 {
     public partial class Dashboard<TItem> where TItem : class
     {

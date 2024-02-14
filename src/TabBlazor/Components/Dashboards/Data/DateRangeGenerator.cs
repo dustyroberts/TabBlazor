@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TabBlazor.Dashboards.Extensions;
-namespace TabBlazor.Dashboards
+using NGageUI.Dashboards.Extensions;
+namespace NGageUI.Dashboards
 {
     public static class DateRangeGenerator
     {

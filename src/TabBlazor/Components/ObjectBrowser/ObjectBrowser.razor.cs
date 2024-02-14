@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Components;
 using System.Reflection;
 using System.Collections;
 using System.Threading.Tasks;
-using TabBlazor.Services;
+using NGageUI.Services;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class ObjectBrowser
     {
@@ -59,7 +59,7 @@ namespace TabBlazor
 
         private static Type GetAnyElementType(Type type)
         {
-            // BadgeType is Array
+            // Type is Array
             // short-circuit if you expect lots of arrays 
             if (type.IsArray)
                 return type.GetElementType();

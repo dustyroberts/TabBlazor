@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TabBlazor.Components.Modals;
+using NGageUI.Components.Modals;
 
 
-namespace TabBlazor.Services
+namespace NGageUI.Services
 {
     public class ModalService : IModalService, IDisposable
     {
@@ -114,6 +114,30 @@ namespace TabBlazor.Services
             zIndex -= zIndexIncrement;
             topOffset -= topOffsetIncrement;
         }
-            
+
+        //public int AddZIndex()
+        //{
+        //    zIndex += zIndexIncrement;
+        //    return zIndex;
+        //}
+
+        //public int DeductZIndex()
+        //{
+        //    zIndex -= zIndexIncrement;
+        //    return zIndex;
+        //}
+
+        //public int AddTopOffset()
+        //{
+        //    var offset = yOffset;
+        //    yOffset += yOffsetIncrement;
+        //    return offset;
+        //}
+
+        //public int DeductTopOffset()
+        //{
+        //    yOffset -= yOffsetIncrement;
+        //    return yOffset;
+        //}
     }
 }

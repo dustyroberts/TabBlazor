@@ -1,7 +1,8 @@
-﻿using System.Reflection;
-using TabBlazor.Components.Offcanvas;
+﻿using NGageUI.Components.Offcanvas;
+using NGageUI;
+using System.Reflection;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public class OffcanvasService : IOffcanvasService
     {
@@ -37,4 +38,3 @@ namespace TabBlazor
     }
 
 }
-

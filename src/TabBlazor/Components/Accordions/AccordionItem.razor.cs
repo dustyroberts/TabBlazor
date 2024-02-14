@@ -1,6 +1,6 @@
-﻿namespace TabBlazor;
+﻿namespace NGageUI;
 
-public class AccordionItem : TablerBaseComponent, IDisposable
+public class AccordionItem : TablerBaseComponent
 {
     [CascadingParameter(Name = "Accordion")]
     public Accordion Accordion { get; set; }
@@ -10,17 +10,9 @@ public class AccordionItem : TablerBaseComponent, IDisposable
     [Parameter] public bool Expanded { get; set; }
     public bool IsExpanded { get; set; }
 
-   
-
     protected override void OnInitialized()
     {
         IsExpanded = Expanded;    
-        Accordion?.AddAccordionItem(this);
+        Accordion.AddAccordionItem(this);
     }
-
-    public void Dispose()
-    {
-        Accordion?.RemoveAccordionItem(this);
-    }
-
 }

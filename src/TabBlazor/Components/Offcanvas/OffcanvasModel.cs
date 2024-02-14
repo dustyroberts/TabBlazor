@@ -1,5 +1,5 @@
 ﻿
-namespace TabBlazor.Components.Offcanvas
+namespace NGageUI.Components.Offcanvas
 {
     public class OffcanvasModel
     {

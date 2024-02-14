@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public abstract class TableRowComponentBase<TableItem> : ComponentBase
     {
@@ -14,7 +14,6 @@ namespace TabBlazor.Components.Tables
         {
             return new ClassBuilder()
                 .Add(column.CssClass)
-                .AddIf("text-end", column.Align == Align.End)
                 .ToString();
         }
     }

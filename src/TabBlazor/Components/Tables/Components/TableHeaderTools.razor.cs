@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using TabBlazor.Components.Tables;
+using NGageUI.Components.Tables;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public class TableHeaderToolsBase<TableItem> : ComponentBase
     {

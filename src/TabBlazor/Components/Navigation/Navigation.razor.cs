@@ -1,6 +1,5 @@
-
-
-namespace TabBlazor
+﻿
+namespace NGageUI
 {
     public partial class Navigation : NavigationBase
     {
@@ -10,7 +9,7 @@ namespace TabBlazor
 
         [Parameter] public bool ExpandOnClick { get; set; }
 
-      
+
 
         protected override void OnInitialized()
         {

@@ -2,9 +2,9 @@
 //using Tabler.Components.Table.Components;
 using System;
 using System.Threading.Tasks;
-using TabBlazor.Components.Tables.Components;
+using NGageUI.Components.Tables.Components;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public interface IColumn<Item>
     {
@@ -18,7 +18,6 @@ namespace TabBlazor.Components.Tables
         bool Visible { get; set; }
         bool SortDescending { get; }
         bool GroupBy { get; set; }
-        Align Align { get; set; }
         Task SortByAsync();
         Task GroupByMeAsync();
         Type Type { get; }

@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Datepicker<TValue> : TablerBaseComponent
     {
@@ -69,7 +69,7 @@ namespace TabBlazor
 
             else
             {
-                throw new SystemException("BadgeType must be of type DateTime or DateTimeOffset");
+                throw new SystemException("Type must be of type DateTime or DateTimeOffset");
             }
         }
 

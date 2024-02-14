@@ -1,7 +1,7 @@
 ﻿@inject IJSRuntime JSRuntime;
 @using Microsoft.JSInterop
 @implements IAsyncDisposable
-@namespace TabBlazor
+@namespace NGageUI
 
 
 <span id="@Id" @attributes="@Attributes" @onclick="AddClickOutsideHandler">
@@ -59,7 +59,7 @@
         await base.OnAfterRenderAsync(firstRender);
         if (firstRender && Strategy == RegisterStrategy.OnRender)
         {
-            await JSRuntime.InvokeVoidAsync("tabBlazor.clickOutsideHandler.addEvent", Id, Concurrence == ConcurrenceStrategy.One, DotNetObjectReference.Create(this));
+            await JSRuntime.InvokeVoidAsync("NGageUI.clickOutsideHandler.addEvent", Id, Concurrence == ConcurrenceStrategy.One, DotNetObjectReference.Create(this));
         }
     }
 
@@ -67,7 +67,7 @@
     {
         try
         {
-            await JSRuntime.InvokeVoidAsync("tabBlazor.clickOutsideHandler.removeEvent", Id);
+            await JSRuntime.InvokeVoidAsync("NGageUI.clickOutsideHandler.removeEvent", Id);
         }
         catch (Exception)
         {
@@ -78,7 +78,7 @@
     {
         if (Strategy == RegisterStrategy.OnClick)
         {
-            await JSRuntime.InvokeVoidAsync("tabBlazor.clickOutsideHandler.addEvent", Id, Concurrence == ConcurrenceStrategy.One, DotNetObjectReference.Create(this));
+            await JSRuntime.InvokeVoidAsync("NGageUI.clickOutsideHandler.addEvent", Id, Concurrence == ConcurrenceStrategy.One, DotNetObjectReference.Create(this));
         }
     }
 

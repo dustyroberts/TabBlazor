@@ -1,4 +1,4 @@
-﻿namespace TabBlazor.Dashboards
+﻿namespace NGageUI.Dashboards
 {
     public class DataFilter<TItem> where TItem : class
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
-using TabBlazor.Components.Tables.Components;
+using NGageUI.Components.Tables.Components;
 
-namespace TabBlazor.Components.Tables
+namespace NGageUI.Components.Tables
 {
     public interface ITable<TableItem>
     {
@@ -16,10 +16,6 @@ namespace TabBlazor.Components.Tables
         int VisibleColumnCount { get; }
         List<TableItem> SelectedItems { get; set; }
         IList<TableItem> Items { get; }
-        /// <summary>
-        /// Contains current items. It is either Items or the data from the dataprovider if dataprovider is used.
-        /// </summary>
-        IList<TableItem> CurrentItems { get; }
         IDataProvider<TableItem> DataProvider { get; set; }
         RenderFragment<TableItem> RowActionTemplate { get; set; }
         bool ShowCheckboxes { get; set; }
@@ -46,7 +42,6 @@ namespace TabBlazor.Components.Tables
         string GetColumnWidth();
         Func<Task<IList<TableItem>>> OnRefresh { get; set; }
         bool HasActionColumn { get; }
-        SelectAllStrategy SelectAllStrategy { get; set; }
     }
 
     public interface ITableState<TableItem>
@@ -75,7 +70,7 @@ namespace TabBlazor.Components.Tables
         bool IsAddInProgress { get; }
         Task CloseEdit();
         Task CancelEdit();
-        bool IsRowValid { get; }
+        bool IsRowValid { get;}
         Action<TableEditPopupOptions<TItem>> EditPopupMutator { get; set; }
 
     }
@@ -90,7 +85,7 @@ namespace TabBlazor.Components.Tables
         TableItem CurrentEditItem { get; }
         Task CloseEdit();
         Task CancelEdit();
-        bool IsRowValid { get; }
+        bool IsRowValid { get;}
         bool HasActionColumn { get; }
     }
 

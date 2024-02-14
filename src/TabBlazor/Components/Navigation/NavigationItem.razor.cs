@@ -1,12 +1,12 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class NavigationItem : NavigationBase
     {
 
         [Parameter] public string Title { get; set; }
-     
+
         [Parameter] public RenderFragment MenuIcon { get; set; }
         [Parameter] public RenderFragment SubMenu { get; set; }
 
@@ -28,7 +28,7 @@ namespace TabBlazor
             .AddIf("active", Disabled)
             .ToString();
 
-      
+
         private void MouseEnter()
         {
             IsExpanded = true;
@@ -44,7 +44,8 @@ namespace TabBlazor
         {
             bool isActive;
 
-            if (!ExpandClick) {
+            if (!ExpandClick)
+            {
                 isActive = true;
                 CollapseAll();
             }

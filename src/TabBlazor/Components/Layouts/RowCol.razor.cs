@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class RowCol : TablerBaseComponent
     {
@@ -9,8 +9,6 @@ namespace TabBlazor
         [Parameter] public int Sm { get; set; } = 0;
         [Parameter] public int Md { get; set; } = 0;
         [Parameter] public int Lg { get; set; } = 0;
-        [Parameter] public int Xl { get; set; } = 0;
-        [Parameter] public int XXl { get; set; } = 0;
         [Parameter] public bool Auto { get; set; }
 
         protected override string ClassNames => ClassBuilder
@@ -22,8 +20,6 @@ namespace TabBlazor
             .AddIf($"col-sm-{Sm}", Sm > 0)
             .AddIf($"col-md-{Md}", Md > 0)
             .AddIf($"col-lg-{Lg}", Lg > 0)
-            .AddIf($"col-xl-{Xl}", Xl > 0)
-            .AddIf($"col-xxl-{XXl}", XXl > 0)
             .AddIf("col-auto", Auto)
             .ToString();
     }

@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public class OffcanvasResult
     {
@@ -15,7 +19,7 @@ namespace TabBlazor
             Cancelled = cancelled;
         }
 
-        public static ModalResult Ok() => new ModalResult(default, typeof(object),false);
+        public static ModalResult Ok() => new ModalResult(default, typeof(object), false);
         public static ModalResult Ok<T>(T result) => new ModalResult(result, typeof(T), false);
 
         public static ModalResult Cancel() => new ModalResult(default, typeof(object), true);

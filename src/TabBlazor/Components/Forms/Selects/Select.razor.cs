@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TabBlazor.Components.Selects;
+using NGageUI.Components.Selects;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Select<TItem, TValue> : TablerBaseComponent
     {

@@ -1,4 +1,4 @@
-namespace TabBlazor.Components.QuickTables.Infrastructure;
+namespace NGageUI.Components.QuickTables.Infrastructure;
 
 internal class EventCallbackSubscriber<T> : IDisposable
 {

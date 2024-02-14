@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class ResizeObserver : TablerBaseComponent
     {
@@ -24,7 +24,7 @@ namespace TabBlazor
         {
             if (firstRender)
             {
-                await jSRuntime.InvokeVoidAsync("tabBlazor.addResizeObserver", elementRef, DotNetObjectReference.Create(this));
+                await jSRuntime.InvokeVoidAsync("NGageUI.addResizeObserver", elementRef, DotNetObjectReference.Create(this));
             }
         }
 

@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public class ModalModel
     {

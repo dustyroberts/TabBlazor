@@ -4,16 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Navbar : TablerBaseComponent, IDisposable
     {
         [Inject] private NavigationManager navigationManager { get; set; }
         [Parameter] public NavbarBackground Background { get; set; }
         [Parameter] public NavbarDirection Direction { get; set; }
-
-        [Parameter] public NavLinkMatch? NavLinkMatch { get; set; }
-
         protected string HtmlTag => "div";
         public bool IsExpanded = true;
 
@@ -35,9 +32,9 @@ namespace TabBlazor
 
         protected override string ClassNames => ClassBuilder
               .Add("navbar navbar-expand-md")
-              .AddIf("navbar-dark", Background == NavbarBackground.Dark)
-              .AddIf("navbar-light", Background == NavbarBackground.Light)
-             .AddIf("navbar-transparent", Background == NavbarBackground.Transparent)
+              //.AddIf("navbar-dark", Background == NavbarBackground.Dark)
+              //.AddIf("navbar-light", Background == NavbarBackground.Light)
+              //.AddIf("navbar-transparent", Background == NavbarBackground.Transparent)
               .AddIf("navbar-vertical", Direction == NavbarDirection.Vertical)
               .ToString();
 

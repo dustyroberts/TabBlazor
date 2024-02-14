@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web.Virtualization;
-using TabBlazor.Components.QuickTables.Infrastructure;
+using NGageUI.Components.QuickTables.Infrastructure;
 
-namespace TabBlazor.Components.QuickTables;
+namespace NGageUI.Components.QuickTables;
 
 [CascadingTypeParameter(nameof(TGridItem))]
 public partial class QuickTable<TGridItem> : IAsyncDisposable

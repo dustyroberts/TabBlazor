@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace TabBlazor
+namespace NGageUI
 {
     public partial class Flag : TablerBaseComponent
     {
